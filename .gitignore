@@ -3,3 +3,4 @@
 
 data/
 logs/
+backup_exclude.conf
