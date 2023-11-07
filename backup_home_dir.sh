@@ -26,8 +26,7 @@ echo "Backup started at $(date)" | tee -a "$backup_log"
 tar --exclude-from="$config_file" -zcvf "$backup_filename" "$backup_root" >> "$backup_log" 2>&1
 
 # Verify the backup
-tar -tzf "$backup_filename" > /dev/null
-if [[ $? -ne 0 ]]; then
+if ! tar -tzf "$backup_filename" > /dev/null; then
     echo "Backup verification failed." | tee -a "$backup_log"
     exit 1
 else
@@ -37,7 +36,7 @@ fi
 
 end_time=$(date +%s)  # Capture end time
 duration=$((end_time - start_time))  # Calculate the difference in seconds
-minutes=$((elapsed / 60))
+minutes=$((duration / 60))
 
 # Finish
 echo "Backup completed at $(date) (took $minutes minutes)" | tee -a "$backup_log"
