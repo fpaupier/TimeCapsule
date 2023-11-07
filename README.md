@@ -1,5 +1,7 @@
 # Home Backup Script for macOS
 
+[![ShellCheck](https://github.com/fpaupier/TimeCapsule/actions/workflows/shell_check.yml/badge.svg)](https://github.com/fpaupier/TimeCapsule/actions/workflows/shell_check.yml)
+
 This project contains a shell script for backing up a macOS home directory. It is designed to be run on a personal 
 macOS laptop.
 
