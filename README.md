@@ -41,7 +41,7 @@ Create `backup_exclude.conf` in the same directory as the script, or in a locati
 # Add more lines as needed
 ```
 
-Replace /Users/yourusername with the appropriate path to your home directory.
+Replace `/Users/yourusername` with the appropriate path to your home directory.
 
 ### Script Output
 
