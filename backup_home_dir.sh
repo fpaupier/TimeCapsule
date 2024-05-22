@@ -41,6 +41,7 @@ verify_backup() {
 
 # Function to calculate and log the duration of the backup process
 log_duration() {
+    # shellcheck disable=SC2155
     local end_time=$(date +%s)
     local duration=$((end_time - start_time))
     local minutes=$((duration / 60))
