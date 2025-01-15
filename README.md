@@ -49,6 +49,20 @@ The backup archive will be saved to the path specified in `backup_dest`.
 A log file for each backup operation will be saved to the same directory as the backup file.
 
 
+### Encryption
+
+Use GPG to encrypt your files that require protection
+
+```bash
+gpg --symmetric --cipher-algo AES256 secrets.txt 
+```
+GPG will ask you to set a passphrase for encryption.
+Then to decrypt the file:
+
+```bash
+gpg -o secrets.txt -d secrets.txt.gpg
+```
+
 ## Contributing
 
 Contributions to this project are welcome! Please fork the repository, make your changes, and submit a pull request.
