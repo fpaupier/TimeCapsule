@@ -54,7 +54,7 @@ A log file for each backup operation will be saved to the same directory as the 
 Use GPG to encrypt your files that require protection
 
 ```bash
-gpg --symmetric --cipher-algo AES256 secrets.txt 
+gpg --symmetric --cipher-algo AES256 --output secrets.txt.gpg secrets.txt 
 ```
 GPG will ask you to set a passphrase for encryption.
 Then to decrypt the file:
